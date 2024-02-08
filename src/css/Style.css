@@ -3,7 +3,7 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    color: #F3F4E7;
+    /* color: #F3F4E7; */
     font-family: 'Roboto', sans-serif;
 }
 
@@ -34,7 +34,7 @@ ul li a{
     font-size: 15px;
     opacity: 0.8;
 }
-a:hover{
+ul li a:hover{
     text-shadow: 0 0 10px rgba(255,255,255,1),
                  0 0 20px rgba(255,255,255,1),
                  0 0 40px rgba(255,255,255,1),
@@ -72,6 +72,7 @@ a:hover{
     margin-top: 30rem;
     font-family: 'Roboto Mono', monospace;
     text-shadow: 0 0 10px #F3F4E7;
+    color: #F3F4E7;
     letter-spacing: 5px;
     white-space: nowrap; /*another effect if i removed it*/
     overflow: hidden;
@@ -94,18 +95,37 @@ a:hover{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    text-align: center;
+    margin-top: 10rem;
+    width: 100%;
+    height: auto;
+    position: relative;
 }
-.card{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+.header-text h1{
+    color: gray;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 5rem;
     width: 100%;
     height: auto;
 }
-.card img{
-    object-fit: cover;
-    width: 30%;
+.card-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     height: auto;
-    border-radius: 50%;
-    position: absolute;
+    position: relative;
+
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    margin-top: 2rem;
 }

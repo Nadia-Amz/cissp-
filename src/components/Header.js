@@ -16,7 +16,7 @@ function Header(){
     window.addEventListener('scroll', stickyNavbar);
 
     return(
-        
+        <>
         <nav className = {sticky ? 'nav-bar sticky' : 'nav-bar'} >
             <a href="/HomePage" >
                 <img className="logoImage" src={Techlogo1} alt=""></img>
@@ -27,5 +27,6 @@ function Header(){
                 </li>
             </ul>
         </nav>
+        </>
     )
 } export default Header;
