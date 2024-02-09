@@ -3,8 +3,10 @@
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
-    /* color: #F3F4E7; */
+}
+body{
     font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .nav-bar{
@@ -31,8 +33,9 @@
 }
 ul li a{
     color: #F3F4E7;
-    font-size: 15px;
+    font-size: large;
     opacity: 0.8;
+    cursor: pointer;
 }
 ul li a:hover{
     text-shadow: 0 0 10px rgba(255,255,255,1),
@@ -58,11 +61,11 @@ ul li a:hover{
 }
 .avatar{
     object-fit: cover;
-    width: 30%;
+    width: 25%;
     height: auto;
     border-radius: 50%;
     position: absolute;
-    top: 1rem;
+    top: 2rem;
 }
 .main-section p{
     z-index: 1;
@@ -71,13 +74,14 @@ ul li a:hover{
     width: 90%;
     margin-top: 30rem;
     font-family: 'Roboto Mono', monospace;
+    font-size: large;
     text-shadow: 0 0 10px #F3F4E7;
     color: #F3F4E7;
     letter-spacing: 5px;
-    white-space: nowrap; /*another effect if i removed it*/
+    white-space: nowrap;
     overflow: hidden;
     animation:
-            typing 4s,
+            typing 8s,
             cursor .4s step-end infinite alternate;
 }
 @keyframes cursor{
@@ -93,26 +97,53 @@ ul li a:hover{
 .cards-section{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-top: 10rem;
     width: 100%;
     height: auto;
     position: relative;
 }
 .header-text h1{
     color: gray;
-    font-size: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
     font-family: 'Roboto', sans-serif;
     margin-top: 5rem;
     width: 100%;
     height: auto;
+    margin-top: 5rem;
+}
+.info-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(7px) ;
+    background-color: rgba(255, 255, 255, 0.10);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
+    margin-top: 15rem;
+}
+.cissplogo{
+    max-width: 20rem;
+    height: auto;
+    border-radius: 20%;
+    margin-left: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+.info-container p{
+    padding: 50px;
+    margin-top: 1rem;
+    font-size: medium;
+    letter-spacing: 1px;
+    font-family: 'Roboto Mono', monospace;
 }
 .card-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 100%;
     height: auto;
@@ -122,10 +153,37 @@ ul li a:hover{
 .card{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: auto;
+    width: 300px;
+    height: 400px;
     border-radius: 16px;
+    margin-top: 5rem;
+    backdrop-filter: blur(7px) ;
+    background-color: rgba(255, 255, 255, 0.20);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
+}
+.vector{
+    object-fit: cover;
+    width: 60%;
+    height: auto;
+    border-radius: 50%;
     margin-top: 2rem;
+}
+.card h2{
+    font-size: medium;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    width: 90%;
+    height: auto;
+}
+.card p{
+    font-size: 14px;
+    font-family: 'Roboto';
+    text-align: center;
+    width: 70%;
+    height: auto;
+    margin-bottom: 2rem;
+    opacity: 0.7;
+
 }

@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import { Link } from "react-scroll";
 import '../css/Style.css';
 import Techlogo1 from "../images/Techlogo1.png";
 
@@ -7,7 +8,7 @@ function Header(){
     const [sticky, setSticky] = useState(false);
 
     function stickyNavbar(){
-            if(window.scrollY>= 300){
+            if(window.scrollY > 0){
                 setSticky(true)
             }else{
                 setSticky(false)
@@ -18,12 +19,19 @@ function Header(){
     return(
         <>
         <nav className = {sticky ? 'nav-bar sticky' : 'nav-bar'} >
-            <a href="/HomePage" >
+            <a href="/" >
                 <img className="logoImage" src={Techlogo1} alt=""></img>
             </a>
             <ul>
                 <li>
-                    <a href="/Domaines">Domaine review</a>
+                    <Link
+                        to="Domains"
+                        spy={true}
+                        smooth={true}
+                        offset={-150}
+                        duration={500} >
+                        Domains review
+                    </Link>
                 </li>
             </ul>
         </nav>
