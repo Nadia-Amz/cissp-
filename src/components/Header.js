@@ -1,10 +1,13 @@
 import React from "react";
 import { useState } from "react";
-import { Link } from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 import '../css/Style.css';
 import Techlogo1 from "../images/Techlogo1.png";
 
 function Header(){
+    const scrollToTop = () => {
+        scroll.scrollToTop();
+      };
     const [sticky, setSticky] = useState(false);
 
     function stickyNavbar(){
@@ -19,9 +22,9 @@ function Header(){
     return(
         <>
         <nav className = {sticky ? 'nav-bar sticky' : 'nav-bar'} >
-            <a href="/" >
-                <img className="logoImage" src={Techlogo1} alt=""></img>
-            </a>
+            <Link to="/">
+                <img className="logoImage" src={Techlogo1} alt=""onClick={scrollToTop}></img>
+            </Link>
             <ul>
                 <li>
                     <Link
