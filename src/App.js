@@ -1,6 +1,7 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Cards from "./components/Cards";
+import ContactUs from "./components/ContactUs";
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Main />
       <Cards />
+      <ContactUs />
     </>
   );
 }

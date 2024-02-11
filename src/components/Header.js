@@ -36,6 +36,16 @@ function Header(){
                         Domains review
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        to="contact"
+                        spy={true}
+                        smooth={true}
+                        offset={-150}
+                        duration={700} >
+                        Contact Us
+                    </Link>
+                </li>
             </ul>
         </nav>
         </>

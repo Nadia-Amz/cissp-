@@ -30,6 +30,11 @@ body{
     object-fit: cover;
     height: auto;
     max-width: 20%;
+    cursor: pointer;
+}
+ul li{
+    display: inline-block;
+    padding: 5px 15px;
 }
 ul li a{
     color: #F3F4E7;
@@ -186,4 +191,113 @@ ul li a:hover{
     margin-bottom: 2rem;
     opacity: 0.7;
 
+}
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.contact-section h2{
+    text-align: center;
+    color: gray;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: auto;
+}
+.form-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(7px) ;
+    background-color: rgba(255, 255, 255, 0.20);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
+}
+.form-container img{
+    object-fit: cover;
+    width: 40%;
+    height: auto;
+    border-radius: 50%;
+    margin-top: 2rem;
+}
+.input-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    height: 600px;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.input-area p{
+    text-align: center;
+    font-family: 'Roboto';
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    height: auto;
+}
+.input-area hr{
+    border: none;
+    width: 10%;
+    height: 2px;
+    background-color: #000000;
+    border-radius: 16px;
+    margin-top: -2rem;
+}
+
+.input-area input,
+.input-area textarea {
+    padding: 15px 25px;
+    width: 70%;
+    height: auto;
+    border-radius: 16px;
+    font-size: 15px;
+    opacity: 0.8;
+    font-family: 'Roboto Mono';
+}
+
+.input-area button{
+    padding: 5px 10px;
+    width: 30%;
+    height: auto;
+    border-radius: 16px;
+    cursor: pointer;
+    font-size: larger;
+    font-family: 'Roboto';
+    background-color: #04383F ;
+    color: #fff;    
+    opacity: 0.8;
+}
+.input-area button:hover{
+    text-shadow: 0 0 10px #F3F4E7;
+    opacity: 1;
+}
+.input-area ion-icon{
+    position: absolute;
+    font-size: 20px;
+    margin-left: 1rem;
+    margin-top: 0.2rem;
+}
+.input-area #message{
+    width: 70%;
+    font-size: medium;
+    color: red;
+    margin-bottom: -1rem;
+    margin-top: -1rem;
+}
+#alert{
+    font-size: medium;
+    color: green;
 }
