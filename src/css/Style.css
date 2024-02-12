@@ -301,3 +301,110 @@ ul li a:hover{
     font-size: medium;
     color: green;
 }
+.source{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+.source h2{
+    text-align: center;
+    color: gray;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    height: auto;
+}
+.resource-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(7px) ;
+    background-color: rgba(255, 255, 255, 0.20);
+    box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
+   
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+  
+}
+.container p{
+    padding: 5px 25px;
+    text-align: center;
+    font-family: 'Roboto Mono';
+
+}
+.patch-logo{
+    object-fit: cover;
+    width: 20%;
+    height: auto;
+    margin-top: 2rem;
+}
+.resources{
+    object-fit: cover;
+    width: 40%;
+    height: auto;
+}
+#link{
+    margin-bottom: 2rem;
+    font-family: 'Roboto Mono';
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: underline;
+    opacity: 0.7;
+}
+#link:hover{
+    opacity: 1;
+}
+
+
+.line{
+    display: flex;
+    border-left: 1px solid black;
+    height: 25%;
+    position: absolute;
+    right: 30%;
+    margin-top: 5rem;
+}
+.footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    margin-top: 5rem;
+    z-index: 1;
+}
+.footer-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.footer-section img{
+    width: 25%;
+    height: auto;
+    cursor: pointer;
+}
+.footer-section p{
+    color: #F3F4E7;
+    font-family: 'Roboto Mono';
+}
+.footer-section #icon{
+    margin-right: 0.5rem;
+}

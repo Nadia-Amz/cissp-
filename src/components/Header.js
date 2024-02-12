@@ -23,7 +23,7 @@ function Header(){
         <>
         <nav className = {sticky ? 'nav-bar sticky' : 'nav-bar'} >
             <Link to="/">
-                <img className="logoImage" src={Techlogo1} alt=""onClick={scrollToTop}></img>
+                <img className="logoImage" src={Techlogo1} alt="" onClick={scrollToTop}></img>
             </Link>
             <ul>
                 <li>
@@ -44,6 +44,16 @@ function Header(){
                         offset={-150}
                         duration={700} >
                         Contact Us
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        to="resources"
+                        spy={true}
+                        smooth={true}
+                        offset={-150}
+                        duration={700} >
+                        Recommended Resources
                     </Link>
                 </li>
             </ul>

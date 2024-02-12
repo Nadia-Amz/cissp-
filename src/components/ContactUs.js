@@ -8,38 +8,7 @@ function Contact(){
     const [subject, setSubject] = useState ("");
     const [comment, setComment] = useState ("");
     const [message, setMessage] = useState("");
-    const [Success, setSuccess] = useState("");
-
-    const emailValidation = () =>{
-
-        const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-        if(email === ""){
-            setMessage('Email can not be empty !');
-        }else if(!regEx.test(email)){
-            setMessage('Oops ! Email is not valid');
-        }else{
-            setMessage("");
-        }
-    };
-
-    const subjectValidation = () =>{
-
-        if(subject === ""){
-            setMessage("Subject can not be empty !");
-
-        }else{
-            setMessage("");
-        }
-    };
-
-    const commentValidation = () =>{
-
-        if(comment === ""){
-            setMessage(" comment can not be empty !");
-        }else{
-            setMessage("");
-        }
-    };
+    const [success, setSuccess] = useState("");
 
     const handleChangeEmail = (e) =>{
         setEmail(e.target.value);
@@ -52,16 +21,28 @@ function Contact(){
     };
 
     const checkContact = (e) =>{
-
         e.preventDefault();
 
-       const isEmailValid = emailValidation();
-       const isSubjectValid = subjectValidation();
-       const isCommentValid = commentValidation();
+        let isValid = true;
+        const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
 
-        const isValid = isEmailValid && isSubjectValid && isCommentValid;
-
+        if(email === ""){
+            isValid = false;
+            setMessage('Email cannot be empty !');
+        }else if(!regEx.test(email)){
+            isValid = false;
+            setMessage('Oops ! Email is not valid');
+        }
+        if(subject === ""){
+            isValid = false;
+            setMessage("Subject cannot be empty !");
+        }
+        if(comment === ""){
+            isValid = false;
+            setMessage("comment cannot be empty !");
+        }
         if(isValid){
+            setMessage("");
             setSuccess('Success !');
         }
     };
@@ -69,38 +50,38 @@ function Contact(){
     return(
         <div className="contact-section">
             <h2>Contact Us</h2>
-        <form className="form-container" id="contact">
+        <form className="form-container" id="contact" >
             <div className="input-area">
             <p>Get in touch</p>
             <hr></hr>
-            <p id="alert">{Success}</p> 
+            {success && <div id="alert"> {success} </div>}
             <input
                 type="email"
                 placeholder="Your Email"
                 value={email}
                 onChange={handleChangeEmail}
             />
-            <p id="message">{message}</p>
+            {message && <div id="message"> {message} </div>}
             <input 
                 type="text" 
                 placeholder="Your Subject" 
                 value={subject}
                 onChange={handleChangeSubject}
             />
-            <p id="message">{message}</p>
+            {message && <div id="message"> {message} </div>}
 
             <textarea  
-                name="comment" 
-                cols='30' 
-                rows='10' 
-                placeholder="Your Message..." 
+                name="comment"
+                cols='30'
+                rows='10'
+                placeholder="Your Message..."
                 value={comment}
                 onChange={handleChangeComment}
             />
-            <p id="message">{message}</p>
+            {message && <div id="message"> {message} </div>}
 
             <button type="submit" onClick={checkContact}
-            >Submit 
+            >Submit
             <ion-icon name="arrow-forward-outline">
             </ion-icon>
             </button>
