@@ -7,7 +7,7 @@ function Contact(){
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState ("");
     const [comment, setComment] = useState ("");
-    const [message, setMessage] = useState("");
+    const [message, setMessage] = useState({});
     const [success, setSuccess] = useState("");
 
     const handleChangeEmail = (e) =>{
@@ -25,25 +25,30 @@ function Contact(){
 
         let isValid = true;
         const regEx = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/
-
+        let updatedMessage = {};
         if(email === ""){
+            updatedMessage.email = "Email cannot be empty !"
             isValid = false;
-            setMessage('Email cannot be empty !');
         }else if(!regEx.test(email)){
+            updatedMessage.email = "Oops ! Email is not valid"
             isValid = false;
-            setMessage('Oops ! Email is not valid');
         }
         if(subject === ""){
+            updatedMessage.subject = "Subject cannot be empty !"
             isValid = false;
-            setMessage("Subject cannot be empty !");
         }
         if(comment === ""){
+            updatedMessage.comment = "comment cannot be empty !"
             isValid = false;
-            setMessage("comment cannot be empty !");
         }
         if(isValid){
-            setMessage("");
+            setMessage({});
             setSuccess('Success !');
+        } else {
+            setSuccess('');
+            setMessage(message => ({
+                ...updatedMessage,
+            }))
         }
     };
 
@@ -61,14 +66,14 @@ function Contact(){
                 value={email}
                 onChange={handleChangeEmail}
             />
-            {message && <div id="message"> {message} </div>}
+            {message.email && <div id="message"> {message.email} </div>}
             <input 
                 type="text" 
                 placeholder="Your Subject" 
                 value={subject}
                 onChange={handleChangeSubject}
             />
-            {message && <div id="message"> {message} </div>}
+            {message.subject && <div id="message"> {message.subject} </div>}
 
             <textarea  
                 name="comment"
@@ -78,7 +83,7 @@ function Contact(){
                 value={comment}
                 onChange={handleChangeComment}
             />
-            {message && <div id="message"> {message} </div>}
+            {message.comment && <div id="message"> {message.comment} </div>}
 
             <button type="submit" onClick={checkContact}
             >Submit

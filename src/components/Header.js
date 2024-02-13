@@ -43,7 +43,7 @@ function Header(){
                         smooth={true}
                         offset={-150}
                         duration={700} >
-                        Contact Us
+                        Contact
                     </Link>
                 </li>
                 <li>
@@ -53,7 +53,7 @@ function Header(){
                         smooth={true}
                         offset={-150}
                         duration={700} >
-                        Recommended Resources
+                        Resources
                     </Link>
                 </li>
             </ul>

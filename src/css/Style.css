@@ -18,6 +18,7 @@ body{
     position: relative;
     width: 100%;
     z-index: 1;
+    padding: 20px 25px;
 }
 .sticky{
     position: fixed;
@@ -29,7 +30,7 @@ body{
 .logoImage{
     object-fit: cover;
     height: auto;
-    max-width: 20%;
+    max-width: 30%;
     cursor: pointer;
 }
 ul li{
@@ -326,7 +327,6 @@ ul li a:hover{
     width: 100%;
     height: auto;
     margin-top: 5rem;
-    border-radius: 16px;
     backdrop-filter: blur(7px) ;
     background-color: rgba(255, 255, 255, 0.20);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
@@ -347,9 +347,10 @@ ul li a:hover{
     font-family: 'Roboto Mono';
 
 }
-.patch-logo{
+.patch-logo,
+.pamadoro-logo{
     object-fit: cover;
-    width: 20%;
+    width: 15%;
     height: auto;
     margin-top: 2rem;
 }
@@ -370,7 +371,6 @@ ul li a:hover{
     opacity: 1;
 }
 
-
 .line{
     display: flex;
     border-left: 1px solid black;
@@ -389,21 +389,26 @@ ul li a:hover{
     width: 100%;
     margin-top: 5rem;
     z-index: 1;
+    padding: 20px 25px;
 }
 .footer-section{
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
+    width: 100%;
+    height: auto;
 }
 .footer-section img{
-    width: 25%;
+    width: 6%;
     height: auto;
     cursor: pointer;
+    margin-bottom: 2rem;
 }
 .footer-section p{
     color: #F3F4E7;
     font-family: 'Roboto Mono';
+    font-size: small;
 }
 .footer-section #icon{
     margin-right: 0.5rem;
