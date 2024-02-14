@@ -22,7 +22,7 @@ function Header(){
     return(
         <>
         <nav className = {sticky ? 'nav-bar sticky' : 'nav-bar'} >
-            <Link to="/">
+            <Link to="*">
                 <img className="logoImage" src={Techlogo1} alt="" onClick={scrollToTop}></img>
             </Link>
             <ul>

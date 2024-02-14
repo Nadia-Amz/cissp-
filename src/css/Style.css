@@ -14,7 +14,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #000000;
+    background-color: #1e1e1e;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -169,6 +169,13 @@ ul li a:hover{
     background-color: rgba(255, 255, 255, 0.20);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
 }
+.card:hover{
+    background-color: #4d4d4d;
+    color: #F3F4E7;
+}
+.card:hover h2{
+    color: #F3F4E7;
+}
 .vector{
     object-fit: cover;
     width: 60%;
@@ -176,12 +183,16 @@ ul li a:hover{
     border-radius: 50%;
     margin-top: 2rem;
 }
-.card h2{
+.card h2,
+.Card a{
+    color: black;
     font-size: medium;
     font-family: 'Roboto Mono';
     text-align: center;
     width: 90%;
     height: auto;
+    cursor: pointer;
+    padding: 10px;
 }
 .card p{
     font-size: 14px;
@@ -218,7 +229,6 @@ ul li a:hover{
     width: 100%;
     height: auto;
     margin-top: 5rem;
-    border-radius: 16px;
     backdrop-filter: blur(7px) ;
     background-color: rgba(255, 255, 255, 0.20);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
@@ -384,7 +394,7 @@ ul li a:hover{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #000000;
+    background-color: #1e1e1e;
     position: relative;
     width: 100%;
     margin-top: 5rem;
@@ -412,4 +422,45 @@ ul li a:hover{
 }
 .footer-section #icon{
     margin-right: 0.5rem;
+}
+.Domain-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+.Domain-page h1{
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    width: 90%;
+    height: auto;
+    margin-top: 2rem;
+}
+.Domain-page h2{
+    text-align: center;
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    height: auto;
+    margin-top: 2rem;
+}
+.Domain-page p{
+    color: black;
+    font-size: larger;
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    margin-top: 5rem;
+    padding: 50px;
+}
+.Domain-page .vector{
+    width: 30%;
+    height: auto;
 }
