@@ -14,7 +14,7 @@ body{
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background-color: #1e1e1e;
+    background-color: #000000;
     position: relative;
     width: 100%;
     z-index: 1;
@@ -189,7 +189,7 @@ ul li a:hover{
     font-size: medium;
     font-family: 'Roboto Mono';
     text-align: center;
-    width: 90%;
+    width: 300px;
     height: auto;
     cursor: pointer;
     padding: 10px;
@@ -389,15 +389,33 @@ ul li a:hover{
     right: 30%;
     margin-top: 5rem;
 }
+.top-button{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    font-size: 3rem;
+    height: 200px;
+}
+.top-button ion-icon{
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+    background-color: #04383F;
+    color: #F3F4E7;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.top-button ion-icon:hover{
+    opacity: 1;
+}
 .footer-container{
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #1e1e1e;
+    background-color: #000000;
     position: relative;
     width: 100%;
-    margin-top: 5rem;
     z-index: 1;
     padding: 20px 25px;
 }
@@ -431,6 +449,12 @@ ul li a:hover{
     width: 100%;
     height: auto;
 }
+.article-review{
+    margin-top: 5rem;
+    padding: 15px 25px;
+    width: 70%;
+    height: auto;
+}
 .Domain-page h1{
     color: black;
     font-size: 25px;
@@ -457,10 +481,41 @@ ul li a:hover{
     font-size: larger;
     font-family: 'Roboto';
     letter-spacing: 1px;
-    margin-top: 5rem;
-    padding: 50px;
+    padding: 15px 20px;
 }
 .Domain-page .vector{
     width: 30%;
     height: auto;
+}
+.next-previous{
+    visibility: visible;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    width: 100%;
+    height: auto;
+    padding: 15px 25px;
+}
+.hidden-class {
+    visibility: hidden;
+}
+.next-previous ion-icon{
+    background-color: #04383F;
+    color: #F3F4E7;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    opacity: 0.8;
+}
+.next-previous ion-icon:hover{
+    opacity: 1;
+}
+.previous-page{
+    visibility: visible;
+}
+.previous{
+    visibility: hidden;
 }

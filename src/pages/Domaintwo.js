@@ -3,10 +3,12 @@ import '../css/Style.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import vector2 from "../images/vector2.png";
-
+import TopIcon from "../components/TopIcon";
+import NextandPrevious from "../components/NextandPrevious";
 
 
 function Domaintwo (){
+
     return(
         <>
             <Header />
@@ -48,6 +50,10 @@ function Domaintwo (){
                 </p>
             </article>
             </div>
+            <NextandPrevious 
+                previous = "/Domain-1-review"
+                next = "/Domain-3-review"/>
+            <TopIcon />
             <Footer />
         </>
     )

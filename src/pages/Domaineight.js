@@ -3,10 +3,13 @@ import '../css/Style.css';
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import vector8 from "../images/vector8.png";
+import TopIcon from "../components/TopIcon";
+import NextandPrevious from "../components/NextandPrevious";
 
 
 
 function Domaineight (){
+    
     return(
         <>
             <Header />
@@ -48,6 +51,10 @@ function Domaineight (){
                 </p>
             </article>
             </div>
+            <NextandPrevious 
+                previous = "/Domain-7-review"
+                />
+           <TopIcon />
             <Footer />
         </>
     )
