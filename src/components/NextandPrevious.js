@@ -8,12 +8,14 @@ function NextandPrevious ({previous, next}){
         <>
         <div className="next-previous">
 
-            <a href ={previous} className = {previous ? 'previous-page' : 'previous'}>
+            <a href ={previous} className = {previous ? 'visible' : 'hidden'}>
                 <ion-icon name="arrow-back-outline" >
                 </ion-icon>
+                <p>Previous Domain</p>
             </a>
 
-            <a href = {next} className = {next ? 'previous-page' : 'previous'}>
+            <a href = {next} className = {next ? 'visible' : 'hidden'}>
+            <p>Next Domain</p>
             <ion-icon name="arrow-forward-outline"></ion-icon>
             </a>
         </div>

@@ -51,6 +51,25 @@ ul li a:hover{
                  0 0 160px rgba(255,255,255,1);
     opacity: 1;
 }
+.domain-home{
+    font-size: 20px;
+}
+
+.domain-home:after{
+    content: "";
+    position: absolute;
+    background-color: rgba(255,255,255,1);
+    font-size: small;
+    height: 1px;
+    width: 0;
+    right: 0;
+    top: 4rem;
+    transition: 0.3s;
+}
+.domain-home:hover:after {
+    width: 3rem;
+    margin-right: 18rem;
+}
 
 .main-section{
     display: flex;
@@ -513,9 +532,21 @@ ul li a:hover{
 .next-previous ion-icon:hover{
     opacity: 1;
 }
-.previous-page{
+.visible{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
     visibility: visible;
 }
-.previous{
+.hidden{
     visibility: hidden;
+}
+.visible p{
+    color: #000000;
+    font-family: 'Roboto';
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import '../css/Style.css';
-import Header from "../components/Header";
+import DomainHeader from "../components/DomainHeader";
 import Footer from "../components/Footer";
 import vector1 from "../images/vector1.png";
 import TopIcon from "../components/TopIcon";
@@ -12,7 +12,7 @@ function Domainone (){
 
     return(
         <>
-            <Header />
+            <DomainHeader />
             <div className="Domain-page">
             <img src={vector1} alt="" className="vector"></img>
             <h1>Security and Risk Management</h1>
