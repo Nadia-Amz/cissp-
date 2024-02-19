@@ -1,59 +1,35 @@
 import React from "react";
-import { useState } from "react";
+import { useState} from "react";
+import Axios from 'axios';
 import '../css/Style.css';
 import contact from "../images/contact.jpg";
 
 function Contact(){
-    // const [formValue, setFormvalue] = useState({email:'',subject:'',body:''});
     const [email, setEmail] = useState("");
     const [subject, setSubject] = useState ("");
     const [body, setBody] = useState("");
     const [message, setMessage] = useState({});
     const [success, setSuccess] = useState("");
 
-    // const handleValues = (e) =>{
-    //     const { name, value }= e.target;
-    //     setFormvalue({...formValue, [name]:value});
-    //     console.log(formValue);
-    // }
-    const handleSubmit = (e) => {
+    const url = "http://getcissp.patchthenet.com/contact";
+
+    const handleSubmit = (e) =>{
         e.preventDefault();
-
-        const objects = {email, subject, body};
-
-        fetch(' http://getcissp.patchthenet.com/contact',{
-            method: 'POST',
-            headers: {"Content-type": "application/json"},
-            body: JSON.stringify({
-                email: objects.email,
-                subject: objects.subject,
-                body: objects.body,
-            }),
-            mode: 'cors',
+        Axios.post(url,{
+            email: email,
+            subject: subject,
+            body: body
         }).then(response => {
-            if(!response.ok){
-                throw new Error(' An unexpected error has occurred')
-            }
-            console.log('Message was sent successfully');
-            console.log(objects.email);
-        })
-        .catch(error =>{
-            console.error(' fetch not working',error)
-        });
+                if(!response.data.success){
+                    throw new Error(' An unexpected error has occurred')
+                }
+                    console.log('Message was sent successfully');
+                    console.log('objects', email, subject, body);
+                })
+                .catch(error =>{
+                    console.error('not working',error)
+                });
     }
-    // const handleChangeEmail = (e) => {
-    //     console.log(email);
-    //     setEmail(e.target.value);
-    // };
-
-    // const handleChangeSubject = (e) =>{
-    //     console.log(subject);
-    //     setSubject(e.target.value);
-    // };
-    // const handleChangeBody = (e) =>{
-    //     console.log(body);
-    //     setBody(e.target.value);
-    // };
 
     const checkContact = () =>{
 
