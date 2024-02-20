@@ -57,7 +57,7 @@ function Domaintwo (){
 
 
 
-<ul><li><span style="font-size: 1rem;">Unstructured: It lacks any formal data model.</span></li><li>Structured: When data is organized (Example: In a relational database)</li></ul>
+<ul><li><span>Unstructured: It lacks any formal data model.</span></li><li>Structured: When data is organized (Example: In a relational database)</li></ul>
 
 
 
@@ -157,7 +157,7 @@ function Domaintwo (){
 
 
 
-<p>For identifying security controls to implement for data in your organization, you can refer to well-known frameworks: <span style="font-size: 1rem;">ISO 27001, ISO 27002</span>, NIST SP 800-53, CSIS 20 Critical Security Controls, COBIT, COSO, FISMA, FedRAMP (For Cloud Service Providers), DoD Instruction 8510.01.</p>
+<p>For identifying security controls to implement for data in your organization, you can refer to well-known frameworks: ISO 27001, ISO 27002, NIST SP 800-53, CSIS 20 Critical Security Controls, COBIT, COSO, FISMA, FedRAMP (For Cloud Service Providers), DoD Instruction 8510.01.</p>
 
 
 
@@ -165,7 +165,7 @@ function Domaintwo (){
 
 
 
-<ul id="block-7f3e32cb-c63d-4578-bb85-08962a2ad9f8"><li><span style="font-size: 1rem;">Scoping : Choose only the security controls that are applicable.</span></li><li>Tailoring : Modify the applicable controls to meet the specific needs.</li><li><span style="font-size: 1rem;">Supplementation : When additional security controls are needed.</span></li></ul>
+<ul id="block-7f3e32cb-c63d-4578-bb85-08962a2ad9f8"><li>Scoping : Choose only the security controls that are applicable.</li><li>Tailoring : Modify the applicable controls to meet the specific needs.</li><li><span>Supplementation : When additional security controls are needed.</span></li></ul>
 
 
 
@@ -177,7 +177,7 @@ function Domaintwo (){
 
 
 
-<ul><li><span style="font-size: 1rem;">Technical : Using computer capabilities and automation to implement safeguards.</span></li><li>Administrative : Policies, procedures, standards and guidelines&#8230;</li><li>Physical : CCTV, Intrusion Detection, security guard&#8230;</li></ul>
+<ul><li><span>Technical : Using computer capabilities and automation to implement safeguards.</span></li><li>Administrative : Policies, procedures, standards and guidelines&#8230;</li><li>Physical : CCTV, Intrusion Detection, security guard&#8230;</li></ul>
 
 
 
@@ -201,7 +201,7 @@ function Domaintwo (){
 
 
 
-<ul><li>Marking and Labeling</li><li><span style="font-size: 1rem;">De-identification</span></li><li>Obfuscation</li><li>Data Tokenization</li><li>Anonymization</li></ul>
+<ul><li>Marking and Labeling</li><li><span>De-identification</span></li><li>Obfuscation</li><li>Data Tokenization</li><li>Anonymization</li></ul>
 
 
 

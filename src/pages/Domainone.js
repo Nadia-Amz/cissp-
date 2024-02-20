@@ -26,7 +26,7 @@ function Domainone (){
 
 
 
-<ul><li><a href="#cia-triad">CIA Triad</a>.</li><li><a href="#security-governance">Security Governance</a>.</li><li><a href="#organizational-documents">Organizational Documents</a>.</li><li><a href="#security-risk-management">Security Risk Management</a>.</li><li><a href="#threat-modeling">Threat Modeling</a>.</li><li><a href="#personnel-security">Personnel Security</a>.</li><li><a href="#awareness-training-and-education">Awareness, Training, and Education</a>.</li><li><a href="#ethics">Ethics</a>.</li><li><a href="#legal-systems">Legal Systems</a>.</li><li><a href="#crimes">Crimes</a>.</li><li><a href="#intellectual-property">Intellectual Property</a>.</li><li><a href="#privacy-laws">Privacy Laws</a>.</li><li><a href="#business-continuity-and-disaster-recovery">Business Continuity and Disaster Recovery</a>.</li></ul>
+<ul><a href="#cia-triad"><li>CIA Triad.</li></a><a href="#security-governance"><li>Security Governance.</li></a><a href="#organizational-documents"><li>Organizational Documents.</li></a><a href="#security-risk-management"><li>Security Risk Management.</li></a><a href="#threat-modeling"><li>Threat Modeling.</li></a><a href="#personnel-security"><li>Personnel Security.</li></a><a href="#awareness-training-and-education"><li>Awareness, Training, and Education.</li></a><a href="#ethics"><li>Ethics.</li></a><a href="#legal-systems"><li>Legal Systems.</li></a><a href="#crimes"><li>Crimes.</li></a><a href="#intellectual-property"><li>Intellectual Property.</li></a><a href="#privacy-laws"><li>Privacy Laws.</li></a><a href="#business-continuity-and-disaster-recovery"><li>Business Continuity and Disaster Recovery.</li></a></ul>
 
 
 
@@ -158,7 +158,7 @@ function Domainone (){
 
 
 
-<ul><li>During Candidate screening and hiring: <ul><li>Scope what skills are needed</li><li><span style="font-size: 1rem;">Background investigations: Financial info, social media, criminal history, driving records, drug testing, prior employment.</span></li><li>Employment agreement and policies: NDA, Acceptable use, conflict of interest (Actual or potential), gift handling, mandatory vacations.</li><li>Interviewing: Never interview a candidate alone.</li></ul></li><li>On-boarding: Orientation, tribal knowledge.</li><li>Employment: Periodic investigations and screening.</li><li>Termination: Voluntary or involuntary.</li></ul>
+<ul><li>During Candidate screening and hiring: <ul><li>Scope what skills are needed</li><li><span>Background investigations: Financial info, social media, criminal history, driving records, drug testing, prior employment.</span></li><li>Employment agreement and policies: NDA, Acceptable use, conflict of interest (Actual or potential), gift handling, mandatory vacations.</li><li>Interviewing: Never interview a candidate alone.</li></ul></li><li>On-boarding: Orientation, tribal knowledge.</li><li>Employment: Periodic investigations and screening.</li><li>Termination: Voluntary or involuntary.</li></ul>
 
 
 
@@ -286,7 +286,7 @@ function Domainone (){
 
 
 
-<ol id="block-c6a8aea8-636e-4fb7-8d45-0a52917027bb"><li>Collection Limitation.</li><li>Data Quality.</li><li>Purpose Specification.</li><li>Use Limitation.</li><li>Security Safeguards.</li><li>Openness.</li><li>Individual Participation.</li><li>Accountability.</li></ol>
+<ol><li>Collection Limitation.</li><li>Data Quality.</li><li>Purpose Specification.</li><li>Use Limitation.</li><li>Security Safeguards.</li><li>Openness.</li><li>Individual Participation.</li><li>Accountability.</li></ol>
 
 
 
