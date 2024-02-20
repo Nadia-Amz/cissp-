@@ -53,6 +53,7 @@ function Header(){
                         Resources
                     </Link>
                 </li>
+                <ion-icon name="menu"></ion-icon>
             </ul>
         </nav>
         </>

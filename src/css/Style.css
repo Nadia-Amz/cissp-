@@ -18,7 +18,7 @@ body{
     position: relative;
     width: 100%;
     z-index: 1;
-    padding: 20px 25px;
+    padding: 10px 20px;
 }
 .sticky{
     position: fixed;
@@ -49,6 +49,16 @@ ul li a:hover{
                  0 0 40px rgba(255,255,255,1),
                  0 0 80px rgba(255,255,255,1),
                  0 0 160px rgba(255,255,255,1);
+    opacity: 1;
+}
+.nav-bar ion-icon{
+    display: none;
+    color: #F3F4E7;
+    font-size: 40px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.nav-bar ion-icon:hover{
     opacity: 1;
 }
 .domain-home{
@@ -93,11 +103,14 @@ ul li a:hover{
     top: 2rem;
 }
 .main-section p{
+    display: flex;
+    justify-content: center;
     z-index: 1;
-    text-align: center;
-    padding: 25px 15px;
-    width: 90%;
-    margin-top: 30rem;
+    padding: 15px 10px;
+    background-color: tomato;
+    width: 100%;
+    height: auto;
+    margin-top: 27rem;
     font-family: 'Roboto Mono', monospace;
     font-size: large;
     text-shadow: 0 0 10px #F3F4E7;
@@ -583,8 +596,15 @@ ul li a:hover{
         width: 80%;
     
     }
+    .cissplogo{
+        max-width: 15rem;
+    }
+    .info-container p{
+        font-size: 14px;
+        padding: 15px;
+    }
 }
-@media (max-width:955px){
+@media (max-width:970px){
     ul li{
         padding: 5px 7px;
     }
@@ -597,28 +617,12 @@ ul li a:hover{
 }
 
 
-@media (max-width:880px){
+@media (max-width:895px){
     .avatar{
         width: 35%;
         top: 5rem;
     }
-    .main-section p{
-        z-index: 1;
-        text-align: center;
-        padding: 25px 15px;
-        width: 90%;
-        margin-top: 30rem;
-        font-family: 'Roboto Mono', monospace;
-        font-size: large;
-        text-shadow: 0 0 10px #F3F4E7;
-        color: #F3F4E7;
-        letter-spacing: 5px;
-        white-space: nowrap;
-        overflow: hidden;
-        animation:
-                typing 8s,
-                cursor .4s step-end infinite alternate;
-    }
+    
     ul li{
         padding: 5px 5px;
     }
@@ -661,18 +665,52 @@ ul li a:hover{
         font-size: 14px;
     }
 }
-@media (max-width:750px){
+@media (max-width:833px){
 
+    .nav-bar ion-icon{
+        display: inline-block;
+    }
+    ul li a{
+        display: none;
+        font-size: 14px;
+    }
     .main-section p{
-        padding: 20px 15px;
-        width: 100%;
         font-size: medium;
     }
 }
+@media (max-width:750px){
+
+   
+    .cissplogo{
+        max-width: 13rem;
+    }
+    .info-container p{
+        font-size: 13px;
+    }
+}
 @media (max-width:650px){
+    .background-image{
+        height: 600px;
+    }
 
     .main-section p{
         font-size: 14px;
+    }
+    .info-container{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        margin-right: 1rem;
+        border-radius: 16px;
+    }
+    .cissplogo{
+        max-width: 10rem;
+        margin-left: 0;
+
+    }
+    .info-container p{
+        font-size: 14px;
+        margin-top: 0;
     }
 }
 @media (max-width:600px){
@@ -681,8 +719,6 @@ ul li a:hover{
         top: 7rem;
     }
     .main-section p{
-        padding: 15px 5px;
-        width: 100%;
         font-size: 13px;
     }
     .card{
