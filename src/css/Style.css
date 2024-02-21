@@ -33,7 +33,7 @@ body{
     max-width: 30%;
     cursor: pointer;
 }
-ul {
+.nav-bar ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -41,17 +41,17 @@ ul {
     align-items: center;
   }
 
-ul li{
+.nav-bar ul li{
     display: inline-block;
     padding: 5px 15px;
 }
-ul li a{
+.nav-bar ul li a{
     color: #F3F4E7;
     font-size: large;
     opacity: 0.8;
     cursor: pointer;
 }
-ul li a:hover{
+.nav-bar ul li a:hover{
     text-shadow: 0 0 10px rgba(255,255,255,1),
                  0 0 20px rgba(255,255,255,1),
                  0 0 40px rgba(255,255,255,1),
@@ -84,11 +84,11 @@ ul li a:hover{
   z-index: 1000;
 }
 
-ul.menu-open li {
+.nav-bar ul.menu-open li {
   margin: 15px 0;
 }
 
-ul.menu-open li.close {
+.nav-bar ul.menu-open li.close {
   display: flex;
   justify-content: flex-end;
 }
