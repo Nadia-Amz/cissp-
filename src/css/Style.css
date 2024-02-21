@@ -33,6 +33,14 @@ body{
     max-width: 30%;
     cursor: pointer;
 }
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+
 ul li{
     display: inline-block;
     padding: 5px 15px;
@@ -52,33 +60,40 @@ ul li a:hover{
     opacity: 1;
 }
 .nav-bar ion-icon{
-    display: none;
+    display: flex;
+    visibility: hidden;
     color: #F3F4E7;
     font-size: 40px;
     cursor: pointer;
     opacity: 0.8;
 }
-.nav-bar ion-icon:hover{
+.nav-bar ion-icon:hover {
     opacity: 1;
 }
-.domain-home{
-    font-size: 20px;
+
+
+.nav-bar ul li a .menu-open {
+  flex-direction: column;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1000;
 }
 
-.domain-home:after{
-    content: "";
-    position: absolute;
-    background-color: rgba(255,255,255,1);
-    font-size: small;
-    height: 1px;
-    width: 0;
-    right: 0;
-    top: 4rem;
-    transition: 0.3s;
+ul.menu-open li {
+  margin: 15px 0;
 }
-.domain-home:hover:after {
-    width: 3rem;
-    margin-right: 18rem;
+
+ul.menu-open li.close {
+  display: flex;
+  justify-content: flex-end;
+}
+.domain-home {
+    font-size: 20px;
 }
 
 .main-section{
@@ -90,7 +105,7 @@ ul li a:hover{
 .background-image{
     object-fit: cover;
     width: 100% ;
-    height: 700px;
+    height: 600px;
     position: absolute;
     top: 0;
 }
@@ -103,21 +118,18 @@ ul li a:hover{
     top: 2rem;
 }
 .main-section p{
-    display: flex;
-    justify-content: center;
+    text-align: center;
     z-index: 1;
     padding: 15px 10px;
-    background-color: tomato;
     width: 100%;
-    height: auto;
     margin-top: 27rem;
     font-family: 'Roboto Mono', monospace;
     font-size: large;
     text-shadow: 0 0 10px #F3F4E7;
     color: #F3F4E7;
     letter-spacing: 5px;
-    white-space: nowrap;
     overflow: hidden;
+    white-space: nowrap;
     animation:
             typing 8s,
             cursor .4s step-end infinite alternate;
@@ -235,7 +247,6 @@ ul li a:hover{
     padding: 10px;
     margin-bottom: 2rem;
     opacity: 0.7;
-
 }
 .contact-section{
     display: flex;
@@ -388,7 +399,6 @@ ul li a:hover{
     padding: 5px 25px;
     text-align: center;
     font-family: 'Roboto Mono';
-
 }
 .patch-logo,
 .pamadoro-logo{
@@ -485,23 +495,21 @@ ul li a:hover{
 .article-review{
     margin-top: 5rem;
     padding: 15px 25px;
-    width: 70%;
+    width: 80%;
     height: auto;
 }
-.article-review h2,h3 {
+.article-review h2,
+.article-review h3 {
     margin-top: 1.5rem;
     margin-bottom: 1rem;
     font-size: 1.5rem  !important;
     font-weight: bold  !important;
     color: black !important;
-    text-align: left !important;
+    text-align: start !important;
 }
 .article-review a {
-    color: blue;
-}
-.article-review li,p {
-    font-size: 1rem !important;
-    font-family: 'Roboto Mono' !important;
+    color: rgb(6, 114, 247);
+    text-decoration: underline;
 }
 .article-review ul, ol {
     display: flex;
@@ -514,9 +522,11 @@ ul li a:hover{
     display: list-item;
     list-style: square !important;
     list-style-type: square !important;
+    color: #04383F;
 }
 .article-review ol li {
     list-style-type: decimal !important;
+    color: #04383F;
 }
 .Domain-page h1{
     color: black;
@@ -541,8 +551,8 @@ ul li a:hover{
 }
 .Domain-page p{
     color: black;
-    font-size: larger;
-    font-family: 'Roboto';
+    font-size: 20px;
+    font-family:'Times New Roman', Times, serif;
     letter-spacing: 1px;
     padding: 15px 20px;
 }
@@ -602,8 +612,8 @@ ul li a:hover{
     }
     .card h2,
     .Card a{
-    font-size: 15px;
-    width: 250px;
+        font-size: 15px;
+        width: 250px;
     }
 }
 
@@ -633,6 +643,16 @@ ul li a:hover{
         font-size: 14px;
         padding: 15px;
     }
+    .container p{
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+    .line{
+        margin-top: 2rem;
+    }
+    #link{
+        margin-bottom: 1rem;
+    }
 }
 @media (max-width:970px){
     ul li{
@@ -643,6 +663,14 @@ ul li a:hover{
     }
     .logoImage{
         max-width: 25%;
+    }
+    .input-area ion-icon{
+        margin-right: 2rem;
+        margin-left: 0.5rem;
+    }
+    .footer-section img{
+        width: 8%;
+        margin-bottom: 1rem;
     }
 }
 
@@ -664,14 +692,15 @@ ul li a:hover{
     }
     .card{
         flex-direction: row;
-        width: 100%;
+        width: 90%;
         height: 300px;
-        border-radius: 0;
+        border-radius: 16px;
     }
     .vector{
         object-fit: cover;
         width: 30%;
         margin-top: 0;
+        margin-left: 1rem;
     }
     .card-text{
         display: flex;
@@ -682,34 +711,77 @@ ul li a:hover{
     .card h2,
     .Card a{
         font-size: medium;
-        width: 400px;
+        width: 300px;
     }
     .card p{
         font-size: 15px;
         width: 70%;
         margin-bottom: 0;
     }
+    .input-area button{
+        width: 35%;
+    }
+    .container p{
+        padding: 5px 30px;
+        font-size: 14px;
+    }
 }
 @media (max-width:850px){
     ul li a{
         font-size: 14px;
     }
+    .Domain-page h1{
+        font-size: 20px;
+    }
+    .Domain-page h2{
+        font-size: 17px;
+    }
+    .Domain-page .vector{
+        width: 50%;
+    }
+ 
 }
 @media (max-width:833px){
-
-    .nav-bar ion-icon{
-        display: inline-block;
+    ul {
+        flex-direction: column;
+    }
+    ul.menu-open {
+        width: 100%;
+        right: 0;
+    }
+    
+    .nav-bar ion-icon {
+        visibility: visible;
     }
     ul li a{
         display: none;
-        font-size: 14px;
+        color: #000000;
+    }
+    .domain-home{
+        display: flex;
     }
     .main-section p{
         font-size: medium;
     }
+    .resource-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .line{
+        display: none;
+    }
+    .resources{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
 }
 @media (max-width:750px){
 
+    .input-area ion-icon{
+        margin-right: 2rem;
+        margin-left: 0.5rem;
+    }
    
     .cissplogo{
         max-width: 13rem;
@@ -717,8 +789,15 @@ ul li a:hover{
     .info-container p{
         font-size: 13px;
     }
+    .form-container img{
+        width: 50%;
+    }
+    .footer-section img{
+        width: 9%;
+    }
 }
 @media (max-width:650px){
+  
     .background-image{
         height: 600px;
     }
@@ -742,20 +821,41 @@ ul li a:hover{
         font-size: 14px;
         margin-top: 0;
     }
+    .form-container img{
+        display: none;
+    }
+    .input-area{
+        width: 100%;
+    }
+    .input-area ion-icon{
+        margin-right: 2rem;
+        margin-left: 0.5rem;
+        font-size: medium;
+    }
+    .input-area button{
+        font-size: medium;
+    }
+    .top-button{
+        font-size: 2.5rem;
+   
+    }
+    .footer-section img{
+        width: 10%;
+    }
+
 }
 @media (max-width:600px){
+    .header-text h1,
+    .contact-section h2,
+    .source h2{
+        font-size: 25px;
+    }
     .avatar{
         width: 40%;
         top: 7rem;
     }
-    .main-section p{
-        font-size: 13px;
-    }
     .card{
-        flex-direction: row;
-        width: 100%;
         height: 250px;
-        border-radius: 0;
     }
     .card h2,
     .Card a{
@@ -767,8 +867,24 @@ ul li a:hover{
         width: 90%;
     }
 }
+@media (max-width:575px){
+    .main-section p{
+        white-space: normal;
+        font-size: 14px;
+    }
+    .domain-home{
+            font-size: 15px;        
+    }
+    .visible p{
+        font-size: 16px;
+    }
+    .next-previous ion-icon{
+        font-size: 25px;
+    }
+}
 
 @media (max-width:500px){
+   
     .card-container{
         flex-direction: column;
     }
@@ -776,17 +892,21 @@ ul li a:hover{
         flex-direction: column;
         width: 300px;
         height: 350px;
-        border-radius: 0;
     }
     .vector{
         object-fit: cover;
         width: 40%;
         margin-top: 2rem;
+        margin-left: 0;
     }
     .card p{
         font-size: 14px;
         width: 90%;
         margin-bottom: 2rem;
+    }
+    .footer-section img{
+        width: 12%;
+        margin-bottom: 1rem;
     }
 }
 

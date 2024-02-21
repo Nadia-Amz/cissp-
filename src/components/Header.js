@@ -6,6 +6,11 @@ import Techlogo1 from "../images/Techlogo1.png";
 
 function Header(){
     const [sticky, setSticky] = useState(false);
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+      };
 
     function stickyNavbar(){
             if(window.scrollY > 0){
@@ -22,7 +27,7 @@ function Header(){
             <a href="*">
                 <img className="logoImage" src={Techlogo1} alt="" ></img>
             </a>
-            <ul>
+            <ul className={isOpen ? 'menu-open' : ''}>
                 <li>
                     <Link
                         to="Domains"
@@ -53,7 +58,9 @@ function Header(){
                         Resources
                     </Link>
                 </li>
-                <ion-icon name="menu"></ion-icon>
+                <div onClick={toggleMenu} className={isOpen ? 'close' : 'menu'}>
+                <ion-icon name="menu" ></ion-icon>
+                </div>
             </ul>
         </nav>
         </>
