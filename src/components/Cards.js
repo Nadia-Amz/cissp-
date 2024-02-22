@@ -19,9 +19,8 @@ function Cards (){
             <div className="info-container">
                 <img src={cissplogo} alt="" className="cissplogo"></img>
                 <p>
-                This section is developed to help you prepare for your CISSP exam. 
-                It should not be considered an official course, nor an alternative 
-                to the official (ISC)² CBK. It is intended to serve as a complementary
+                This website is developed to help you prepare for your CISSP exam.
+                It is intended to serve as a complementary
                 guide to help you fill any gaps that you might have and put you on
                 the straight path toward your certification.
                 </p>

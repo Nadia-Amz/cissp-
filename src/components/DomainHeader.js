@@ -21,13 +21,15 @@ function DomainHeader(){
             <a href="/">
                 <img className="logoImage" src={Techlogo1} alt="" ></img>
             </a>
-            <ul>
+            <div className="domain-header">
+            <ul >
                 <li>
                     <a href="/" className="domain-home">
                         Home
                     </a>
                 </li>
-                </ul>
+            </ul>
+            </div>
         </nav>
         </>
     )

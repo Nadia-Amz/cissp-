@@ -21,13 +21,20 @@ function Header(){
     }
     window.addEventListener('scroll', stickyNavbar);
 
+    function resizeWindow(){
+        if(window.innerWidth > 833){
+            setIsOpen(false);
+        }
+    }
+    window.addEventListener('resize', resizeWindow);
+
     return(
         <>
         <nav className = {sticky ? 'nav-bar sticky' : 'nav-bar'} >
             <a href="*">
                 <img className="logoImage" src={Techlogo1} alt="" ></img>
             </a>
-            <ul className={isOpen ? 'menu-open' : ''}>
+            <ul className={isOpen ? 'menu' : ''}>
                 <li>
                     <Link
                         to="Domains"
@@ -58,10 +65,10 @@ function Header(){
                         Resources
                     </Link>
                 </li>
-                <div onClick={toggleMenu} className={isOpen ? 'close' : 'menu'}>
-                <ion-icon name="menu" ></ion-icon>
-                </div>
             </ul>
+            <div onClick={toggleMenu} className={isOpen ? 'close' : 'menu'}>
+                <ion-icon name="menu" ></ion-icon>
+            </div>
         </nav>
         </>
     )

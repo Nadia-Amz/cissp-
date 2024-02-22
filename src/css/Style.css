@@ -12,12 +12,11 @@ body{
 .nav-bar{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background-color: #000000;
     position: relative;
     width: 100%;
-    z-index: 1;
     padding: 10px 20px;
 }
 .sticky{
@@ -30,16 +29,17 @@ body{
 .logoImage{
     object-fit: cover;
     height: auto;
-    max-width: 30%;
+    width: 8rem;
     cursor: pointer;
 }
 .nav-bar ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
-  }
+    width: 80%;
+    padding: 10px 20px;
+}
 
 .nav-bar ul li{
     display: inline-block;
@@ -60,8 +60,7 @@ body{
     opacity: 1;
 }
 .nav-bar ion-icon{
-    display: flex;
-    visibility: hidden;
+    display: none;
     color: #F3F4E7;
     font-size: 40px;
     cursor: pointer;
@@ -72,28 +71,39 @@ body{
 }
 
 
-.nav-bar ul li a .menu-open {
+.nav-bar ul.menu {
   flex-direction: column;
+  justify-content: center;
   position: absolute;
+  width: 300px;
+  height: 500px;
   top: 70px;
-  right: 20px;
-  background-color: #fff;
+  right: 0;
+  background-color: #000000;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  border-radius: 8px;
-  z-index: 1000;
+  z-index: 2;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  transition: .3s ease-in-out;
 }
 
-.nav-bar ul.menu-open li {
+.nav-bar ul.menu li {
   margin: 15px 0;
+  display: flex;
+
 }
 
-.nav-bar ul.menu-open li.close {
+.nav-bar ul.menu li a:hover{
+    text-shadow: 0 0 10px #0FFF50,
+                 0 0 20px #0FFF50,
+                 0 0 60px #0FFF50,
+                 0 0 90px #0FFF50;
+}
+
+ul.menu li.close {
   display: flex;
   justify-content: flex-end;
-}
-.domain-home {
-    font-size: 20px;
 }
 
 .main-section{
@@ -187,7 +197,6 @@ body{
     padding: 50px;
     margin-top: 1rem;
     font-size: medium;
-    letter-spacing: 1px;
     font-family: 'Roboto Mono', monospace;
 }
 .card-container{
@@ -389,7 +398,7 @@ body{
 .container{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     width: 100%;
     height: 300px;
@@ -497,6 +506,7 @@ body{
     padding: 15px 25px;
     width: 80%;
     height: auto;
+    text-align: justify;
 }
 .article-review h2,
 .article-review h3 {
@@ -515,15 +525,18 @@ body{
     display: flex;
     flex-direction: column;
 }
-.article-review li {
-    padding-bottom: 0.8rem;
-}
+
 .article-review li {
     display: list-item;
     list-style: square !important;
     list-style-type: square !important;
     color: #04383F;
+    font-size: 20px;
+    font-family: "Figtree", sans-serif;
+    padding-bottom: 0.8rem;
+
 }
+
 .article-review ol li {
     list-style-type: decimal !important;
     color: #04383F;
@@ -552,7 +565,7 @@ body{
 .Domain-page p{
     color: black;
     font-size: 20px;
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Figtree", sans-serif;
     letter-spacing: 1px;
     padding: 15px 20px;
 }
@@ -661,9 +674,6 @@ body{
     ul li a{
         font-size: 16px;
     }
-    .logoImage{
-        max-width: 25%;
-    }
     .input-area ion-icon{
         margin-right: 2rem;
         margin-left: 0.5rem;
@@ -673,19 +683,21 @@ body{
         margin-bottom: 1rem;
     }
 }
+@media (max-width:945px){
+    .nav-bar ul li{
+        padding: 5px 10px;
+    }
+}
+@media (max-width:915px){
+    .nav-bar ul li{
+        padding: 5px 7px;
+    }
+}
 
-
-@media (max-width:895px){
+@media (max-width:897px){
     .avatar{
         width: 35%;
         top: 5rem;
-    }
-    
-    ul li{
-        padding: 5px 5px;
-    }
-    ul li a{
-        font-size: 15px;
     }
     .card-container{
         flex-direction: column;
@@ -727,8 +739,13 @@ body{
     }
 }
 @media (max-width:850px){
-    ul li a{
-        font-size: 14px;
+    .nav-bar ul li a{
+        font-size: 17px;
+    }
+    @media (max-width:945px){
+        .nav-bar ul li{
+            padding: 5px 5px;
+        }
     }
     .Domain-page h1{
         font-size: 20px;
@@ -744,22 +761,18 @@ body{
 @media (max-width:833px){
     ul {
         flex-direction: column;
+        justify-content: center;
     }
-    ul.menu-open {
-        width: 100%;
-        right: 0;
-    }
-    
     .nav-bar ion-icon {
-        visibility: visible;
+        display: block;
     }
-    ul li a{
+    .nav-bar ul li{
         display: none;
-        color: #000000;
     }
-    .domain-home{
-        display: flex;
+    .nav-bar ul.menu li a{
+        font-size: medium;
     }
+  
     .main-section p{
         font-size: medium;
     }
@@ -907,6 +920,15 @@ body{
     .footer-section img{
         width: 12%;
         margin-bottom: 1rem;
+    }
+    .article-review{
+        width: 100%;
+    }
+
+    .Domain-page p,
+    .article-review li{
+        font-size: 18px;
+
     }
 }
 
