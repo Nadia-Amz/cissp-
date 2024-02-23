@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Domainone from "./pages/Domainone";
 import Domaintwo from "./pages/Domaintwo";
 import Domainthree from "./pages/Domainthree";
