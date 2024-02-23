@@ -9,7 +9,10 @@ body{
     scroll-behavior: smooth;
 }
 
-.nav-bar{
+/*Navigation section */
+
+.nav-bar,
+.domain-header{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -19,7 +22,8 @@ body{
     width: 100%;
     padding: 10px 20px;
 }
-.sticky{
+.sticky
+{
     position: fixed;
     box-shadow: 0px 0px 10px rgb(0 0 0/10%);
     top: 0;
@@ -32,7 +36,8 @@ body{
     width: 8rem;
     cursor: pointer;
 }
-.nav-bar ul {
+.nav-bar ul,
+.domain-header ul {
     list-style: none;
     display: flex;
     justify-content: flex-end;
@@ -41,17 +46,20 @@ body{
     padding: 10px 20px;
 }
 
-.nav-bar ul li{
+.nav-bar ul li,
+.domain-header ul li{
     display: inline-block;
     padding: 5px 15px;
 }
-.nav-bar ul li a{
+.nav-bar ul li a,
+.domain-header ul li a{
     color: #F3F4E7;
     font-size: large;
     opacity: 0.8;
     cursor: pointer;
 }
-.nav-bar ul li a:hover{
+.nav-bar ul li a:hover,
+.domain-header ul li a:hover{
     text-shadow: 0 0 10px rgba(255,255,255,1),
                  0 0 20px rgba(255,255,255,1),
                  0 0 40px rgba(255,255,255,1),
@@ -59,6 +67,8 @@ body{
                  0 0 160px rgba(255,255,255,1);
     opacity: 1;
 }
+/*Humburger icon*/
+
 .nav-bar ion-icon{
     display: none;
     color: #F3F4E7;
@@ -69,7 +79,6 @@ body{
 .nav-bar ion-icon:hover {
     opacity: 1;
 }
-
 
 .nav-bar ul.menu {
   flex-direction: column;
@@ -91,7 +100,6 @@ body{
 .nav-bar ul.menu li {
   margin: 15px 0;
   display: flex;
-
 }
 
 .nav-bar ul.menu li a:hover{
@@ -101,10 +109,7 @@ body{
                  0 0 90px #0FFF50;
 }
 
-ul.menu li.close {
-  display: flex;
-  justify-content: flex-end;
-}
+/*Main section */
 
 .main-section{
     display: flex;
@@ -154,6 +159,9 @@ ul.menu li.close {
         width: 0;
     }
 }
+
+/*Cards section &info section */
+
 .cards-section{
     display: flex;
     flex-direction: column;
@@ -257,6 +265,9 @@ ul.menu li.close {
     margin-bottom: 2rem;
     opacity: 0.7;
 }
+
+/*Contact section */
+
 .contact-section{
     display: flex;
     flex-direction: column;
@@ -365,6 +376,8 @@ ul.menu li.close {
     font-size: medium;
     color: green;
 }
+/* recommended resources section*/
+
 .source{
     display: flex;
     flex-direction: column;
@@ -441,6 +454,9 @@ ul.menu li.close {
     right: 30%;
     margin-top: 5rem;
 }
+
+/* scroll to top button*/
+
 .top-button{
     display: flex;
     justify-content: flex-end;
@@ -460,6 +476,9 @@ ul.menu li.close {
 .top-button ion-icon:hover{
     opacity: 1;
 }
+
+/*footer section*/
+
 .footer-container{
     display: flex;
     flex-direction: row;
@@ -493,6 +512,9 @@ ul.menu li.close {
 .footer-section #icon{
     margin-right: 0.5rem;
 }
+
+/*Domain pages section*/
+
 .Domain-page{
     display: flex;
     flex-direction: column;
@@ -501,6 +523,40 @@ ul.menu li.close {
     width: 100%;
     height: auto;
 }
+
+.Domain-page h1{
+    color: black;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Roboto Mono';
+    text-align: center;
+    width: 90%;
+    height: auto;
+    margin-top: 2rem;
+}
+.Domain-page h2{
+    text-align: center;
+    color: gray;
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    height: auto;
+    margin-top: 2rem;
+}
+.Domain-page p{
+    color: black;
+    font-size: 20px;
+    font-family: "Figtree", sans-serif;
+    letter-spacing: 1px;
+    padding: 15px 20px;
+}
+.Domain-page .vector{
+    width: 30%;
+    height: auto;
+}
+
 .article-review{
     margin-top: 5rem;
     padding: 15px 25px;
@@ -541,38 +597,9 @@ ul.menu li.close {
     list-style-type: decimal !important;
     color: #04383F;
 }
-.Domain-page h1{
-    color: black;
-    font-size: 25px;
-    text-transform: uppercase;
-    font-family: 'Roboto Mono';
-    text-align: center;
-    width: 90%;
-    height: auto;
-    margin-top: 2rem;
-}
-.Domain-page h2{
-    text-align: center;
-    color: gray;
-    font-size: 20px;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
-    width: 90%;
-    height: auto;
-    margin-top: 2rem;
-}
-.Domain-page p{
-    color: black;
-    font-size: 20px;
-    font-family: "Figtree", sans-serif;
-    letter-spacing: 1px;
-    padding: 15px 20px;
-}
-.Domain-page .vector{
-    width: 30%;
-    height: auto;
-}
+
+/*Go forwars& Go back icons */
+
 .next-previous{
     visibility: visible;
     display: flex;
@@ -584,9 +611,6 @@ ul.menu li.close {
     width: 100%;
     height: auto;
     padding: 15px 25px;
-}
-.hidden-class {
-    visibility: hidden;
 }
 .next-previous ion-icon{
     background-color: #04383F;
@@ -617,6 +641,8 @@ ul.menu li.close {
     display: inline-block;
     padding: 10px;
 }
+
+/*Media Breakpoints*/
 
 @media (max-width:1240px){
     .card{
@@ -667,6 +693,7 @@ ul.menu li.close {
         margin-bottom: 1rem;
     }
 }
+
 @media (max-width:970px){
     ul li{
         padding: 5px 7px;
@@ -683,11 +710,13 @@ ul.menu li.close {
         margin-bottom: 1rem;
     }
 }
+
 @media (max-width:945px){
     .nav-bar ul li{
         padding: 5px 10px;
     }
 }
+
 @media (max-width:915px){
     .nav-bar ul li{
         padding: 5px 7px;
@@ -738,6 +767,7 @@ ul.menu li.close {
         font-size: 14px;
     }
 }
+
 @media (max-width:850px){
     .nav-bar ul li a{
         font-size: 17px;
@@ -758,8 +788,9 @@ ul.menu li.close {
     }
  
 }
+
 @media (max-width:833px){
-    ul {
+    .nav-bar ul {
         flex-direction: column;
         justify-content: center;
     }
@@ -789,6 +820,7 @@ ul.menu li.close {
     }
 
 }
+
 @media (max-width:750px){
 
     .input-area ion-icon{
@@ -809,6 +841,7 @@ ul.menu li.close {
         width: 9%;
     }
 }
+
 @media (max-width:650px){
   
     .background-image{
@@ -857,6 +890,7 @@ ul.menu li.close {
     }
 
 }
+
 @media (max-width:600px){
     .header-text h1,
     .contact-section h2,
@@ -880,6 +914,7 @@ ul.menu li.close {
         width: 90%;
     }
 }
+
 @media (max-width:575px){
     .main-section p{
         white-space: normal;
