@@ -31,7 +31,7 @@ function Header() {
   return (
     <>
       <nav className={sticky ? "nav-bar sticky" : "nav-bar"}>
-        <a href="*">
+        <a href="/">
           <img className="logoImage" src={Techlogo1} alt=""></img>
         </a>
         <ul className={isOpen ? "menu" : ""}>

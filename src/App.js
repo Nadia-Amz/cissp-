@@ -15,7 +15,7 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="*" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/Domain-1-review" element={<Domainone />} />
           <Route path="/Domain-2-review" element={<Domaintwo />} />
           <Route path="/Domain-3-review" element={<Domainthree />} />
