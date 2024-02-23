@@ -11,7 +11,7 @@ function Contact() {
   const [message, setMessage] = useState({});
   const [success, setSuccess] = useState("");
 
-  const url = "http://getcissp.patchthenet.com/contact";
+  const url = "http://getcissp.patchthenet.com/contact.php";
 
   const handleSubmit = (e) => {
     e.preventDefault();
