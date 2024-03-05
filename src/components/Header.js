@@ -11,6 +11,9 @@ function Header() {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+  const handleClick = () => {
+    setIsOpen(false);
+  };
 
   function stickyNavbar() {
     if (window.scrollY > 0) {
@@ -42,6 +45,7 @@ function Header() {
               smooth={true}
               offset={-150}
               duration={700}
+              onClick={handleClick}
             >
               Domains review
             </Link>
@@ -53,6 +57,7 @@ function Header() {
               smooth={true}
               offset={-150}
               duration={700}
+              onClick={handleClick}
             >
               Contact
             </Link>
@@ -64,6 +69,7 @@ function Header() {
               smooth={true}
               offset={-150}
               duration={700}
+              onClick={handleClick}
             >
               Resources
             </Link>

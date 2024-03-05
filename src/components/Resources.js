@@ -17,9 +17,9 @@ function Resources() {
             This website will accompany you from the basic fundamentals to the
             more advanced concepts related to cyber security.
           </p>
-          <Link to="https://patchthenet.com/" id="link">
+          <a href="https://patchthenet.com/" id="link">
             patchthenet.com
-          </Link>
+          </a>
         </div>
         <div className="line"></div>
         <div className="container">
@@ -28,9 +28,9 @@ function Resources() {
             Pomodoro technique. This technique enhances productivity by breaking
             down focus time into smaller chunks separated by short breaks.
           </p>
-          <Link to="https://pamadoro.com/" id="link">
+          <a href="https://pamadoro.com/" id="link">
             pamadoro.com
-          </Link>
+          </a>
         </div>
       </div>
     </div>

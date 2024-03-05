@@ -8,8 +8,12 @@ function Main() {
     <>
       <main className="main-section">
         <img src={background} alt="" className="background-image"></img>
-        <img src={avatar1} alt="" className="avatar"></img>
-        <p>Your path to get your CISSP certification.</p>
+        <div className="avatar-div">
+          <img src={avatar1} alt="" className="avatar"></img>
+        </div>
+        <div className="background-text">
+          <p>Your path to get your CISSP certification.</p>
+        </div>
       </main>
     </>
   );

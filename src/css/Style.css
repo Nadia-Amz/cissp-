@@ -103,10 +103,14 @@ body{
 }
 
 .nav-bar ul.menu li a:hover{
-    text-shadow: 0 0 10px #0FFF50,
-                 0 0 20px #0FFF50,
-                 0 0 60px #0FFF50,
-                 0 0 90px #0FFF50;
+    text-shadow: 0 0 10px rgba(255,255,255,1),
+                 0 0 20px rgba(255,255,255,1),
+                 0 0 40px rgba(255,255,255,1),
+                 0 0 80px rgba(255,255,255,1),
+                 0 0 160px rgba(255,255,255,1);
+}
+.nav-bar ul.menu .close{
+    display: none;
 }
 
 /*Main section */
@@ -124,20 +128,30 @@ body{
     position: absolute;
     top: 0;
 }
+.avatar-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
 .avatar{
     object-fit: cover;
     width: 25%;
     height: auto;
     border-radius: 50%;
-    position: absolute;
     top: 2rem;
 }
-.main-section p{
+.background-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.background-text p{
     text-align: center;
     z-index: 1;
     padding: 15px 10px;
     width: 100%;
-    margin-top: 27rem;
+    margin-top: 30rem;
     font-family: 'Roboto Mono', monospace;
     font-size: large;
     text-shadow: 0 0 10px #F3F4E7;
@@ -192,6 +206,8 @@ body{
     background-color: rgba(255, 255, 255, 0.10);
     box-shadow: 5px 5px 25px rgba(0, 0, 0, 0.1); 
     margin-top: 15rem;
+    width: 100%;
+    height: auto;
 }
 .cissplogo{
     max-width: 20rem;
@@ -234,7 +250,8 @@ body{
     background-color: #4d4d4d;
     color: #F3F4E7;
 }
-.card:hover h2{
+.card:hover h2,
+.card:hover p{
     color: #F3F4E7;
 }
 .vector{
@@ -256,6 +273,7 @@ body{
     padding: 10px;
 }
 .card p{
+    color: #000000;
     font-size: 14px;
     font-family: 'Roboto';
     text-align: center;
@@ -265,6 +283,7 @@ body{
     margin-bottom: 2rem;
     opacity: 0.7;
 }
+
 
 /*Contact section */
 
@@ -435,12 +454,10 @@ body{
     height: auto;
 }
 #link{
-    margin-bottom: 2rem;
     font-family: 'Roboto Mono';
-    font-weight: bold;
     cursor: pointer;
-    text-decoration: underline;
-    opacity: 0.7;
+    opacity: 0.8;
+    color:#000000;
 }
 #link:hover{
     opacity: 1;
@@ -643,6 +660,16 @@ body{
 }
 
 /*Media Breakpoints*/
+
+@media (min-width:2136px){
+    .background-text p{
+        margin-top: 37rem;
+        font-size: 25px;
+    }
+    .background-image{
+        height: 700px;
+    }
+}
 
 @media (max-width:1240px){
     .card{
