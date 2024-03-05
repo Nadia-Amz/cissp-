@@ -670,6 +670,15 @@ body{
         height: 700px;
     }
 }
+@media (min-width:1964px){
+    .background-text p{
+        margin-top: 38rem;
+        font-size: 25px;
+    }
+    .background-image{
+        height: 800px;
+    }
+}
 
 @media (max-width:1240px){
     .card{
